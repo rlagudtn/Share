@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-13T07:31:36.491Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36" etag="hVZSZsSEgymDtSfQ-Iw8" version="17.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-13T07:51:40.403Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36" etag="z7i8Ru5ApvX7tuEMfu-J" version="17.4.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2033" dy="1862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2301" dy="2016" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -244,6 +244,64 @@
         </mxCell>
         <mxCell id="crYCE6TG-FLy9huzWlAI-108" value="- addChatOnPost(post: Post): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-101">
           <mxGeometry y="112" width="210" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-109" value="ChatService" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="254" y="220" width="400" height="242" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-110" value="- chatRepository: ChatRepository" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="26" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-124" value="- memberRepository: MemberRepository" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="52" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-125" value="- postRepository: PostRepository" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="78" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-126" value="- messageRepository: MessageRepository" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="104" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-111" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="130" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-112" value="+ createChat(postId: Long, memberId1 Long, memberId2 Long): Long" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="138" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-114" value="+ findByChatId(chatId Long): Chat" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="164" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-127" value="+ createMessage(chatId: Long, memberId: Long, content: String): Long" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="190" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-113" value="- checkExistingChat(postId: Long, memberId1,memberId2 Long): Chat" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-109">
+          <mxGeometry y="216" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-115" value="ChatController" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-200" y="220" width="370" height="164" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-121" value="- chatService: ChatService" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-115">
+          <mxGeometry y="26" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-116" value="- memberService : MemberService" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-115">
+          <mxGeometry y="52" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-117" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-115">
+          <mxGeometry y="78" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-118" value="+ chatList(memberId: Long): String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-115">
+          <mxGeometry y="86" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-122" value="+ createChat(postId : Long, writerId: Long, otherMember: Long): void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-115">
+          <mxGeometry y="112" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-119" value="+ chatDetail(chatId: Long): String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="crYCE6TG-FLy9huzWlAI-115">
+          <mxGeometry y="138" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="crYCE6TG-FLy9huzWlAI-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="crYCE6TG-FLy9huzWlAI-119" target="crYCE6TG-FLy9huzWlAI-126">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
